@@ -1,5 +1,6 @@
 package superFrame;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +19,10 @@ public class SuperFrame {
 	}
 
 	public void go() {
+	
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 		frame = new JFrame("DesktopForPDD");
 		panel = new JPanel();
 
@@ -26,6 +31,12 @@ public class SuperFrame {
 		JButton buttonC = new JButton("C");
 		JButton buttonD = new JButton("D");
 		JButton buttonE = new JButton("E");
+		buttonA.addActionListener(new ButtonListenerA());
+		buttonB.addActionListener(new ButtonListenerB());
+		buttonC.addActionListener(new ButtonListenerC());
+		buttonD.addActionListener(new ButtonListenerD());
+		buttonE.addActionListener(new ButtonListenerE());
+		
 		
 		frame.add(panel);
 		panel.add(buttonA);
@@ -33,6 +44,12 @@ public class SuperFrame {
 		panel.add(buttonC);
 		panel.add(buttonD);
 		panel.add(buttonE);
+		
+		frame.getContentPane().add(BorderLayout.NORTH, panel);
+		
+		frame.setSize(400, 500);
+		frame.setVisible(true);
+		
 		
 	}
 
