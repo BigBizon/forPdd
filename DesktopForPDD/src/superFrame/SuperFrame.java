@@ -13,10 +13,10 @@ public class SuperFrame {
 	JPanel panel;
 	
 
-	public static void main(String[] args) {
-		SuperFrame sFrame = new SuperFrame();
-		sFrame.go();
-	}
+	//public static void main(String[] args) {
+	///	SuperFrame sFrame = new SuperFrame();
+	//	sFrame.go();
+	//}
 
 	public void go() {
 	
